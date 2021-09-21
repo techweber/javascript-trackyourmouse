@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Track your mouse</title>
+</head>
+<body>
+	<label>X position of mouse</label><br/>
+	<input type="text" id="x" />
+	<label>Y position of mouse</label><br/>
+	<input type="text" id="y">
+
+<script>
+
+	var mouseX = 0;
+	var mouseY = 0;
+
+	document.onmousemove = function (e) {
+
+		mouseX = e.clientX;
+		mouseY = e.clientY;
+
+		console.log('X : ' + mouseY  + ' y : ' + mouseY);
+
+		document.getElementById('x').value = mouseX;
+		document.getElementById('y').value = mouseY;
+		document.title = mouseX + ' - ' + mouseY;
+	}
+
+</script>
+
+</body>
+</htm>
